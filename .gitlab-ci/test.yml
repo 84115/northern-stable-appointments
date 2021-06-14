@@ -1,0 +1,16 @@
+test:main:
+  extends: .php
+  image: php7.3
+  stage: test
+  except:
+    - tags
+    - schedules
+  script:
+    - php vendor/bin/phpunit
+  tags:
+    - phpunit
+  artifacts:
+    paths:
+      - storage/logs/
+    when: on_failure
+    expire_in: 1 hour

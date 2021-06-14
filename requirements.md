@@ -43,7 +43,9 @@ I'd normally use Laravel Valet but an alterative could be Homestead.
 Use main and feature/id-name
 
 # What could a deployment look like? (Infra/CI/CD)
-Can you .gitlab-ci of how the could be done.
+I have added a folder to the root of the project called `.gitlab-ci` to show what a configuration of CI would look like.
+The feature/changes could then be opened as a pull/merge request. Where upon passing could be merged into the active deployment branch.
+Once the active deployment branch is ready to be deployed it is merged with Gitlab where it will be deployed.
 
 # Database Structure
 users
