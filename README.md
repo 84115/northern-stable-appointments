@@ -1,3 +1,11 @@
+# API Endpoint Required fields
+`appointment_host_id`
+`service_id`
+`name`
+`reference`
+`notes`
+`user_id`
+
 # Authentication
 This was scaffolded using Laravel Breeze.
 
