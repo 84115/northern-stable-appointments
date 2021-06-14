@@ -16,4 +16,14 @@ class Appointment extends Model
         'reference',
         'notes',
     ];
+
+    public function host()
+    {
+        return $this->hasOne(AppointmentHost::class);
+    }
+
+    public function service()
+    {
+        return $this->hasOne(Service::class);
+    }
 }

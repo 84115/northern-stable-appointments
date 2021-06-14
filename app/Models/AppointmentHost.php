@@ -13,4 +13,14 @@ class AppointmentHost extends Model
         'appointment_host_id',
         'user_id',
     ];
+
+    public function host()
+    {
+        return $this->hasOne(AppointmentHost::class);
+    }
+
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
 }
