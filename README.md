@@ -11,6 +11,7 @@ For the API Auth I have set up a simple Passport installation.
 # Seed data
 All seeded Data has been added to the directory:
 `/database/seeders`
+Note: Appointment(s) is not seeded, but this can be created via it's API endpoint `/api/v1/appointments`
 
 # DB Migrations
 - users
@@ -70,3 +71,15 @@ I have added a directory to the root of the project called `/.gitlab-ci` to show
 The feature/changes could then be opened as a pull/merge request.
 Where upon passing could be merged into the active deployment branch.
 Once the active deployment branch is ready to be deployed it is merged with Gitlab where it will be deployed.
+
+# Task Notes
+- Appointments should contain up to 6 relevant fields/relationships (user, time, service etc...)
+    - n/a
+- Create an API capable of the following operations: Create, Read, Update and Delete on "Appointments".
+    - The endpoint for this resource is `/api/v1/appointments`.
+- Consider modelling two more complicated relationships/entities - eg: User->Appointments? Service->Appointments?
+    - I have added the relationships to all the models in the project.
+    - Although due to trying to keep to the 4/5 hour timeframe I haven't added the relationship to the JsonResource of the API endpoint.
+- Upon creation and deletion of an appointment the system must send an email? How would this scale?
+    - This feature wasn't completed due to the timeframe but code idea was to use a Model Observer `/app/Observers/AppointmentObserver.php`
+    - To send emails based on if the Model was either created or destroyed.
