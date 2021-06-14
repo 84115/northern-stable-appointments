@@ -16,9 +16,9 @@ use App\Http\Controllers\Api\v1\AppointmentController;
 |
 */
 
-//Route::middleware('auth:api')->group(function () {
+Route::middleware('auth:api')->group(function () {
     Route::resource('user', UsersController::class, ['only' => ['index']]);
     Route::resource('service', ServiceController::class, ['only' => ['index', 'show']]);
     Route::resource('appointment', AppointmentController::class, ['except' => ['create', 'edit']]);
-//});
+});
 
