@@ -22,7 +22,7 @@
                     @endforelse
                 </div>
                 <div class="mt-3 p-6 bg-white border-b border-gray-200">
-                    <form action="/oauth/clients" method="POST">
+                    <form action="{{ url('oauth/clients') }}" method="POST">
                         <div>
                             <x-label for="name">Name</x-label>
                             <x-input type="text" name="name" placeholder="Client Name"></x-input>
