@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
-class AppointmentHostSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,6 @@ class AppointmentHostSeeder extends Seeder
      */
     public function run()
     {
-        //
+         User::factory(5)->create();
     }
 }
