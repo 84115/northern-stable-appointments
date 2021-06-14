@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class AppointmentHost extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'appointment_host_id',
+        'user_id',
+    ];
 }

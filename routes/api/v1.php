@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\v1\UsersController;
+use App\Http\Controllers\Api\v1\ServiceController;
+use App\Http\Controllers\Api\v1\AppointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +16,9 @@ use App\Http\Controllers\Api\v1\UsersController;
 |
 */
 
-Route::middleware('auth:api')->resource('user', UsersController::class, ['only' => ['index']]);
+//Route::middleware('auth:api')->group(function () {
+    Route::resource('user', UsersController::class, ['only' => ['index']]);
+    Route::resource('service', ServiceController::class, ['only' => ['index', 'show']]);
+    Route::resource('appointment', AppointmentController::class, ['except' => ['create', 'edit']]);
+//});
+
