@@ -15,11 +15,8 @@ class CreateAppointmentHostsTable extends Migration
     {
         Schema::create('appointment_hosts', function (Blueprint $table) {
             $table->id();
-            /*
-                appointment_host_id:id
-                appointment_id:id
-                user_id:user:id
-            */
+            $table->integer('appointment_host_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }
