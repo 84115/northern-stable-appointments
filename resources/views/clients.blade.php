@@ -29,7 +29,7 @@
                         </div>
                         <div class="mt-2">
                             <x-label for="redirect">Redirect</x-label>
-                            <x-input type="text" name="redirect" placeholder="http://northern-stable-beta.test/callback"></x-input>
+                            <x-input type="text" name="redirect" placeholder="{{ url('callback') }}"></x-input>
                         </div>
                         <div class="mt-2">
                             @csrf
